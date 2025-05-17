@@ -8,7 +8,7 @@ static const int sloppyfocus               = 1;  /* focus follows mouse */
 static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will disable idle tracking even if it's surface isn't visible  */
 static const int smartgaps                 = 0;  /* 1 means no outer gap when there is only one window */
 static const int monoclegaps               = 0;  /* 1 means outer gaps in monocle layout */
-static const unsigned int borderpx         = 1;  /* border pixel of windows */
+static const unsigned int borderpx         = 2;  /* border pixel of windows */
 static const unsigned int gappih           = 10; /* horiz inner gap between windows */
 static const unsigned int gappiv           = 10; /* vert inner gap between windows */
 static const unsigned int gappoh           = 10; /* horiz outer gap between windows and screen edge */
@@ -145,23 +145,23 @@ static const Key keys[] = {
     { MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_CTRL,    XKB_KEY_h,      incigaps,      {.i = +1 } },
     { MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_CTRL,    XKB_KEY_l,      incigaps,      {.i = -1 } },
     { MODKEY|WLR_MODIFIER_LOGO,  XKB_KEY_0,          togglegaps,     {0} },
-    { MODKEY|WLR_MODIFIER_LOGO|WLR_MODIFIER_SHIFT,   XKB_KEY_parenright,defaultgaps,    {0} },
-    { MODKEY,                    XKB_KEY_y,          incihgaps,     {.i = +1 } },
-    { MODKEY,                    XKB_KEY_o,          incihgaps,     {.i = -1 } },
-    { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_y,          incivgaps,     {.i = +1 } },
-    { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_o,          incivgaps,     {.i = -1 } },
-    { MODKEY|WLR_MODIFIER_LOGO,  XKB_KEY_y,          incohgaps,     {.i = +1 } },
-    { MODKEY|WLR_MODIFIER_LOGO,  XKB_KEY_o,          incohgaps,     {.i = -1 } },
-    { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Y,          incovgaps,     {.i = +1 } },
-    { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_O,          incovgaps,     {.i = -1 } },
+    { MODKEY|WLR_MODIFIER_SHIFT,   XKB_KEY_parenright,defaultgaps,    {0} },
+    // { MODKEY,                    XKB_KEY_y,          incihgaps,     {.i = +1 } },
+    // { MODKEY,                    XKB_KEY_o,          incihgaps,     {.i = -1 } },
+    // { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_y,          incivgaps,     {.i = +1 } },
+    // { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_o,          incivgaps,     {.i = -1 } },
+    // { MODKEY|WLR_MODIFIER_LOGO,  XKB_KEY_y,          incohgaps,     {.i = +1 } },
+    // { MODKEY|WLR_MODIFIER_LOGO,  XKB_KEY_o,          incohgaps,     {.i = -1 } },
+    // { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Y,          incovgaps,     {.i = +1 } },
+    // { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_O,          incovgaps,     {.i = -1 } },
     { MODKEY,                    XKB_KEY_l,          setmfact,       {.f = +0.05f} },
     { MODKEY,                    XKB_KEY_Return,     zoom,           {0} },
     { MODKEY,                    XKB_KEY_Tab,        view,           {0} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Q,          killclient,     {0} },
-    { MODKEY,                    XKB_KEY_t,          setlayout,      {.v = &layouts[0]} },
+    // { MODKEY,                    XKB_KEY_t,          setlayout,      {.v = &layouts[0]} },
     // { MODKEY,                    XKB_KEY_f,          setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                    XKB_KEY_m,          setlayout,      {.v = &layouts[2]} },
-    { MODKEY,                    XKB_KEY_space,      setlayout,      {0} },
+    // { MODKEY,                    XKB_KEY_m,          setlayout,      {.v = &layouts[2]} },
+    // { MODKEY,                    XKB_KEY_space,      setlayout,      {0} },
     { MODKEY,                    XKB_KEY_t,         togglefloating, {0} },
     { MODKEY,                    XKB_KEY_f,         togglefullscreen, {0} },
     { MODKEY,                    XKB_KEY_0,          view,           {.ui = ~0} },

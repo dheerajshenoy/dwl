@@ -149,6 +149,7 @@ static const Key keys[] = {
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_less,       tagmon,         {.i = WLR_DIRECTION_LEFT} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_greater,    tagmon,         {.i = WLR_DIRECTION_RIGHT} },
 
+    { MODKEY,                    XKB_KEY_b,          togglebar,      {0} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_J,          rotate_clients, {.i = -1} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_K,          rotate_clients, {.i = +1} },
 
